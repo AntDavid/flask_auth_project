@@ -9,3 +9,9 @@ class LonginForm(flaskForm)
     submit = SubmitField('Login')
 
 
+class RegisterForm(flaskForm):
+    username = StringField('Username', validators=[DataRequired(), length(min=4, max=40)])
+    email = StringField('Email', validators=[DataRequired(), Email()]) 
+    password = PasswordField('Password', validators=[DataRequired(), length(min=8, max=40)])
+    confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
+    submit = SubmitField('Register')
