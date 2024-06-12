@@ -1,0 +1,11 @@
+flask_auth_project/
+├── app.py
+├── models.py
+├── forms.py
+├── templates/
+│   ├── login.html
+│   ├── register.html
+│   └── profile.html
+├── static/
+├── config.py
+└── __init__.py
